@@ -2,10 +2,6 @@
 
 # 适用于小米路由器4A千兆版/R3G v2的breed控制台的 Actions-OpenWrt
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
-
 这是一个基于Actions-OpenWrt的自动编译项目,做了一些小修改,可以编译出支持breed控制台刷入的Openwrt固件,默认用[lean的源码](https://github.com/coolsnowwolf/lede)编译,导入了[kenzok8的常用软件库](https://github.com/kenzok8/openwrt-packages.git)
 lean源码直接编译的固件经过breed控制台刷入会无线重启
 
