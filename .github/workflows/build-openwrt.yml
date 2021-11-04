@@ -64,12 +64,14 @@ jobs:
     - name: Update Xiaomi R3Gv2/4A Gi dts
       run: |
         cd openwrt/target/linux/ramips/dts
+        rm mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
         wget https://raw.githubusercontent.com/Plutonium141/XiaoMi4AG-Actions-OpenWrt/main/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
         cd ../../../../../
         
     - name: Update Xiaomi R3Gv2/4A Gi mt7621.mk
       run: |
         cd openwrt/target/linux/ramips/image
+        rm mt7621.mk
         wget https://raw.githubusercontent.com/Plutonium141/XiaoMi4AG-Actions-OpenWrt/main/mt7621.mk
         cd ../../../../../
 
