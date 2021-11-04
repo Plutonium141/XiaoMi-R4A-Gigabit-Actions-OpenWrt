@@ -61,10 +61,17 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
-    - name: Fix Xiaomi R3Gv2/4A Gi dts
+    - name: Update Xiaomi R3Gv2/4A Gi dts
       run: |
-        cd openwrt
-        git clone
+        cd openwrt/target/linux/ramips/dts
+        wget https://raw.githubusercontent.com/Plutonium141/XiaoMi4AG-Actions-OpenWrt/main/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
+        cd ../../../../../
+        
+    - name: Update Xiaomi R3Gv2/4A Gi mt7621.mk
+      run: |
+        cd openwrt/target/linux/ramips/image
+        wget https://raw.githubusercontent.com/Plutonium141/XiaoMi4AG-Actions-OpenWrt/main/mt7621.mk
+        cd ../../../../../
 
     - name: Load custom feeds
       run: |
