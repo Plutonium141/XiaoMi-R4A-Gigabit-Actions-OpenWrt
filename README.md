@@ -26,7 +26,7 @@
 
 - 把`.config`文件上传到本项目里即可根据你的`.config`文件编译(上传前记得把原来的`.config`删除,也可以直接修改)
 - 导入的插件库是在`diy-part1.sh`配置的
-- 第4步的白色下拉栏"Run workflow"会发现有一个`SSH connection to Actions`并且它的值是`false`如果改为`true`就可以用ssh进入actions了(!!!听说使用ssh连接进actions有可能导致封号!!!)
+- [在第4步](https://github.com/Plutonium141/XiaoMi4AG-Actions-OpenWrt#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)的白色下拉栏"Run workflow"会发现有一个`SSH connection to Actions`并且它的值是`false`如果改为`true`就可以用ssh进入actions了(!!!听说使用ssh连接进actions有可能导致封号!!!)
 - `.github/workflows/build-openwrt.yml`里的23行为默认源码仓库,如果你想换一个源码编译可以改这一行(lean源码以外的openwrt可能会编译失败)
 - `.github/workflows/build-openwrt.yml`第24行为所选源码的分支
 - 具体使用方法请查看[Actions-OpenWrt作者的在线说明文档](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
