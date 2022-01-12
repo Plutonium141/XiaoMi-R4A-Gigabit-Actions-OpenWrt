@@ -18,17 +18,21 @@
 - 0 先Fork这个项目
 - 1 进入到自己的项目里
 - 2 点击`Actions`
-- 3 点击`Workflows`下的`Build OpenWrt`
-- 4 找到右侧的白色下拉栏"Run workflow"并点击
-- 5 点击绿色的"Run workflow"按钮即可开始编译
+![截图1](https://user-images.githubusercontent.com/62324696/149089269-af2e0149-c177-4a23-ac4d-ea962b3cf499.jpg)
+- 3 点击`Build OpenWrt`下的`Run workflow`即可开始编译
+![截图2](https://user-images.githubusercontent.com/62324696/149091183-c26f7a8a-8841-444d-ad77-0b5cc4b8795b.jpg)
+- 4 等待编译完成后再次进入`Actions`点击刚刚完成的一次编译
+![截图3](https://user-images.githubusercontent.com/62324696/149091977-5dc23449-d6d9-427e-ae50-bcd504abb544.jpg)
+- 5 点击编译完成的固件即可下载
+![截图4](https://user-images.githubusercontent.com/62324696/149092391-6645411b-ec2e-4074-ae32-d74c0d5ed32d.jpg)
 
 ## 提示
 
 - 把`.config`文件上传到本项目里即可根据你的`.config`文件编译(上传前记得把原来的`.config`删除,也可以直接修改)
 - 导入的插件库是在`diy-part1.sh`配置的
-- 在"如何使用?"的第4步的白色下拉栏"Run workflow"会发现有一个`SSH connection to Actions`并且它的值是`false`如果改为`true`就可以用ssh进入actions了(!!!听说使用ssh连接进actions有可能导致封号!!!)
-- `.github/workflows/build-openwrt.yml`里的23行为默认源码仓库,如果你想换一个源码编译可以改这一行(lean源码以外的openwrt可能会编译失败)
-- `.github/workflows/build-openwrt.yml`第24行为所选源码的分支
+![截图5](https://user-images.githubusercontent.com/62324696/149093566-9a53ee64-a89f-40c5-bc6c-9986c6086e34.jpg)
+- 在"Run workflow"下有一个`SSH connection to Actions`如果改为`true`就可以用ssh进入actions了![截图6](https://user-images.githubusercontent.com/62324696/149093304-a45bb61b-9bda-4365-b5c0-02354313704c.jpg)
+<br>*不建议, 听说使用ssh连接进actions有可能导致封号!!!*
 - 具体使用方法请查看[Actions-OpenWrt作者的在线说明文档](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
 ## 关于本项目
