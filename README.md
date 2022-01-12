@@ -16,6 +16,7 @@
 ## 如何使用?
 
 - 0 先Fork这个项目
+![截图0](https://user-images.githubusercontent.com/62324696/149093848-61c37f29-78ef-47e3-8d76-e110db0a353c.jpg)
 - 1 进入到自己的项目里
 - 2 点击`Actions`
 ![截图1](https://user-images.githubusercontent.com/62324696/149089269-af2e0149-c177-4a23-ac4d-ea962b3cf499.jpg)
