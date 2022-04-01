@@ -2,7 +2,7 @@
 
 # 适用于小米路由器4A千兆版的Actions-OpenWrt
 
-这是一个基于[P3TERX的Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)的自动编译项目，做了一些小修改，默认用[lean的源码](https://github.com/coolsnowwolf/lede)编译，导入了[kenzok8的常用软件库](https://github.com/kenzok8/openwrt-packages.git)，由于lean源码直接编译的R4A固件经过breed控制台刷入会无限重启，需要修改`mt7621_xiaomi_mi-router-4a-3g-v2.dtsi`和`mt7621.mk`的分区信息才能正常刷入，所以对Actions-OpenWrt做出一些修改，使其可以在Github Actions上完成对文件的修改(其实是把已经修改好的文件进行替换)然后再进行编译。
+这是一个基于[P3TERX的Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)的自动编译项目，做了一些小修改，默认用[lean的源码](https://github.com/coolsnowwolf/lede)编译，导入了[kenzok8的常用软件库](https://github.com/kenzok8/small-package)，由于lean源码直接编译的R4A固件经过breed控制台刷入会无限重启，需要修改`mt7621_xiaomi_mi-router-4a-3g-v2.dtsi`和`mt7621.mk`的分区信息才能正常刷入，所以对Actions-OpenWrt做出一些修改，使其可以在Github Actions上完成对文件的修改(其实是把已经修改好的文件进行替换)然后再进行编译。
 
 - 原理基于恩山pidge的
 [[恩山]分享小米R4A千兆版编译OPENWRT(Breed直刷版)](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=4052254)
@@ -30,6 +30,7 @@
 ## 提示
 
 - 把`.config`文件上传到本项目里即可根据你的`.config`文件编译(上传前记得把原来的`.config`删除,也可以直接修改)
+- 自己本地生成`.config`文件的时候记得改源码里的`feeds.conf.default`文件 添加一行`src-git small8 https://github.com/kenzok8/small-package`
 - 导入的插件库是在`diy-part1.sh`配置的
 ![截图5](https://user-images.githubusercontent.com/62324696/149093566-9a53ee64-a89f-40c5-bc6c-9986c6086e34.jpg)
 - 在"Run workflow"下有一个`SSH connection to Actions`如果改为`true`就可以用ssh进入actions了![截图6](https://user-images.githubusercontent.com/62324696/149093304-a45bb61b-9bda-4365-b5c0-02354313704c.jpg)
@@ -40,7 +41,7 @@
 
 - [Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)
 - [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
-- [kenzok8的常用软件库](https://github.com/kenzok8/openwrt-packages.git)
+- [kenzok8的常用软件库](https://github.com/kenzok8/small-package)
 - [Microsoft Azure](https://azure.microsoft.com)
 - [GitHub Actions](https://github.com/features/actions)
 - [OpenWrt](https://github.com/openwrt/openwrt)
