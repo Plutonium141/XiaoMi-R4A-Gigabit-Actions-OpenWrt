@@ -29,10 +29,19 @@
 
 ## 提示
 
+- 编译好的压缩包里多个文件`openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin`就是用来刷入的固件
+- ![图片](https://user-images.githubusercontent.com/62324696/161236877-316fd2ad-3bb5-4fa0-9541-f2a24059a923.png)
+- r4a千兆版只有16MB的闪存插件不要选的太多，如果太多会导致无法输出-squashfs-sysupgrade后缀的固件，算是编译失败了，要重新再来
 - 把`.config`文件上传到本项目里即可根据你的`.config`文件编译(上传前记得把原来的`.config`删除,也可以直接修改)
+- 如果你想自己生成`.config`文件设备类型按照这样选就可以了
+- ![图片](https://user-images.githubusercontent.com/62324696/161233565-65c2a229-7aff-4828-aa1a-ff44e421c0d1.png) 
+- 在编译菜单的Extra package菜单下勾选ipv6helper固件即可支持ipv6
+- ![图片](https://user-images.githubusercontent.com/62324696/161233982-f2d692d2-20d0-4e52-8363-6e27dc3e5aac.png)
 - 自己本地生成`.config`文件的时候记得改源码里的`feeds.conf.default`文件 添加一行`src-git small8 https://github.com/kenzok8/small-package`
+- 注意后导入的软件包改为small-package 同一个人的另外一个项目因为有更多的软件所以改为这个软件包，这个软件包里的部分插件可能会导致编译失败比如mosdns，socat，wifidog等，还有部分插件有冲突比如有多个uu加速插件等
+- easyemsh插件因为batman依赖的问题打开会无限重启，暂时在作者修复前先不要用easymesh
 - 导入的插件库是在`diy-part1.sh`配置的
-![截图5](https://user-images.githubusercontent.com/62324696/149093566-9a53ee64-a89f-40c5-bc6c-9986c6086e34.jpg)
+![图片](https://user-images.githubusercontent.com/62324696/161236686-54172b1c-ff83-414a-9f43-771b8d480074.png)
 - 在"Run workflow"下有一个`SSH connection to Actions`如果改为`true`就可以用ssh进入actions了![截图6](https://user-images.githubusercontent.com/62324696/149093304-a45bb61b-9bda-4365-b5c0-02354313704c.jpg)
 <br>*不建议, 听说使用ssh连接进actions有可能导致封号!!!*
 - 具体使用方法请查看[Actions-OpenWrt作者的在线说明文档](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
