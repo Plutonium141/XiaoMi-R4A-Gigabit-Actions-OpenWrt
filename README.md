@@ -17,13 +17,18 @@
 
 - 0 先Fork这个项目
 ![截图0](https://user-images.githubusercontent.com/62324696/149093848-61c37f29-78ef-47e3-8d76-e110db0a353c.jpg)
+---
 - 1 进入到自己的项目里
+---
 - 2 点击`Actions`
 ![截图1](https://user-images.githubusercontent.com/62324696/149089269-af2e0149-c177-4a23-ac4d-ea962b3cf499.jpg)
+---
 - 3 点击`Build OpenWrt`下的`Run workflow`即可开始编译
 ![截图2](https://user-images.githubusercontent.com/62324696/149091183-c26f7a8a-8841-444d-ad77-0b5cc4b8795b.jpg)
+---
 - 4 等待编译完成后再次进入`Actions`点击刚刚完成的一次编译
 ![截图3](https://user-images.githubusercontent.com/62324696/149091977-5dc23449-d6d9-427e-ae50-bcd504abb544.jpg)
+---
 - 5 点击编译完成的固件即可下载
 ![截图4](https://user-images.githubusercontent.com/62324696/149092391-6645411b-ec2e-4074-ae32-d74c0d5ed32d.jpg)
 
