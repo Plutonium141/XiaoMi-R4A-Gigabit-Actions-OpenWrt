@@ -63,15 +63,11 @@ jobs:
         
     - name: Revise mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
       run: |
-        cd openwrt/target/linux/ramips/dts
-        wget https://raw.githubusercontent.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt/main/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi -O mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
-        cd ../../../../../
+        cp -f mt7621_xiaomi_mi-router-4a-3g-v2.dtsi openwrt/target/linux/ramips/dts
         
     - name: Revise mt7621.mk
       run: |
-        cd openwrt/target/linux/ramips/image
-        wget https://raw.githubusercontent.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt/main/mt7621.mk -O mt7621.mk
-        cd ../../../../../
+        cp -f mt7621.mk openwrt/target/linux/ramips/image
 
     - name: Load custom feeds
       run: |
