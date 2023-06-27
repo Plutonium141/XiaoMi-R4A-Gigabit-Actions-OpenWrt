@@ -2,11 +2,7 @@
 
 # 适用于小米路由器4A千兆版的Actions-OpenWrt
 
-~~好像出了点问题 现在不能用了 我有时间改一下看看~~ 
-
-好像是修好了至少固件能编译出来了 我手头没有设备没法测试……
-
-这是一个基于[P3TERX的Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)的自动编译项目，做了一些小修改，默认用[lean的源码](https://github.com/coolsnowwolf/lede)编译，导入了[kenzok8的常用软件库](https://github.com/kenzok8/small-package)，由于lean源码直接编译的R4A固件经过breed控制台刷入会无限重启，需要修改`mt7621_xiaomi_mi-router-4a-3g-v2.dtsi`和`mt7621.mk`的分区信息才能正常刷入，所以对Actions-OpenWrt做出一些修改，使其可以在Github Actions上完成对文件的修改(其实是把已经修改好的文件进行替换)然后再进行编译。
+这是一个基于[P3TERX的Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)的自动编译项目，做了一些小修改，默认用[lean's OpenWRT分支](https://github.com/coolsnowwolf/lede)编译，导入了[kenzok8的常用软件库](https://github.com/kenzok8/small-package)
 
 - 原理基于恩山pidge的
 [[恩山]分享小米R4A千兆版编译OPENWRT(Breed直刷版)](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=4052254)
@@ -51,8 +47,6 @@
 - ![图片](https://user-images.githubusercontent.com/62324696/161233982-f2d692d2-20d0-4e52-8363-6e27dc3e5aac.png)
 - 额外的插件库是在`diy-part1.sh`配置的
 ![图片](https://user-images.githubusercontent.com/62324696/161236686-54172b1c-ff83-414a-9f43-771b8d480074.png)
-- 在"Run workflow"下有一个`SSH connection to Actions`如果改为`true`就可以用ssh进入actions了![截图6](https://user-images.githubusercontent.com/62324696/149093304-a45bb61b-9bda-4365-b5c0-02354313704c.jpg)
-<br>*不建议, 听说使用ssh连接进actions有可能导致封号!!!*
 - 具体使用方法请查看[Actions-OpenWrt作者的在线说明文档](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
 ## 关于本项目
