@@ -7,7 +7,7 @@
 - 原理基于恩山pidge的
 [[恩山]分享小米R4A千兆版编译OPENWRT(Breed直刷版)](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=4052254)
 
-- 如果实在不想编译固件可以用恩山cool_rose的固件
+- 如果实在不想编译固件可以用恩山cool_rose的固件，或者是到[Releases](https://github.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt/releases)里去下载最近编译好的固件
 [[恩山] [R4A] lean源码openwrt固件小米4A千兆版 文件管理+清新主题+ipv6+广告屏蔽](https://www.right.com.cn/forum/thread-4083541-1-1.html)
 
 - 已有小米R4A千兆版但是不知道怎么刷?可以去恩山看kan1111的
@@ -36,7 +36,6 @@
 
 - 默认的登录ip是`192.168.1.1`密码是`password`
 - 本仓库偶尔会更新记得检查一下
-- 你可以直接到[Releases](https://github.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt/releases)里去下载最近编译好的固件
 - 编译好的压缩包里多个文件`openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin`就是用来刷入的固件
 - ![图片](https://user-images.githubusercontent.com/62324696/161236877-316fd2ad-3bb5-4fa0-9541-f2a24059a923.png)
 - r4a千兆版只有16MB的闪存，插件不要选的太多，如果太多会导致无法输出-squashfs-sysupgrade后缀的固件，算是编译失败了，要重新再来
